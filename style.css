@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: "Tenor Sans", sans-serif;
+    text-align: center;
+
+    background: linear-gradient(135deg, #ffafbd, #c9a0ff);
+    color: white;
+}
+
+/* title */
+.title {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+/* profile image */
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* glass text */
+.glass {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+}
+
+/* music button */
+.music-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+
+    background: white;
+    cursor: pointer;
+}
+
+/* gift layout */
+.gift-section {
+    margin-top: 40px;
+}
+
+.gift-card {
+    margin: 40px auto;
+}
+
+/* gift box */
+.gift {
+    width: 320px;
+    height: 320px;
+    margin: 10px auto;
+
+    border-radius: 15px;
+    border: 5px solid white;
+
+    background-image: url("https://media.tenor.com/xAntboaLkW4AAAAM/happybirthday-happy-birthday.gif");
+    background-size: cover;
+    background-position: center;
+
+    transition: 0.4s ease-in-out;
+}
+
+.gift:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+/* hover gifs */
+#g1:hover { background-image: url("https://media.tenor.com/hRgp9Dh1ppQAAAAM/happy-birthday.gif"); }
+#g2:hover { background-image: url("https://media1.tenor.com/m/8nIuTXbuK7YAAAAC/friends-friends-tv-gif.gif"); }
+#g3:hover { background-image: url("https://media1.tenor.com/m/6ELmZImpfuwAAAAd/siblings-cuddle.gif"); }
+#g4:hover { background-image: url("https://media3.giphy.com/media/wvYNSqBAMDVx8CEYkt/giphy.gif"); }
+#g5:hover { background-image: url("https://media1.tenor.com/m/Vc3qxt2JrOYAAAAd/toy-car-little-girl.gif"); }
+
+/* footer */
+.footer {
+    margin-top: 60px;
+    padding: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px;
+    color: white;
+    line-height: 1.6;
+}

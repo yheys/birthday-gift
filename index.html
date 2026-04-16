@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 🎵 MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="mezmur/🔴_አዲስ_ዝማሬ_ይችን_እድሜ_ዘማሪት_ሲስተር_ሕይወት_ተፈሪ_yichin_Idme256k.mp3" type="audio/mp3">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵 Play / Pause Music</button>
+
+<!-- 🎈 HEADER -->
+<h1 class="title">🎉 Happy Birthday 🎂</h1>
+
+<!-- 👤 IMAGE -->
+<div class="profile">
+    <img src="image/240A1552.JPG" alt="profile">
+</div>
+
+<!-- 💖 TEXT -->
+<div class="glass">
+    <h2>Wishing you a day full of happiness 💖</h2>
+</div>
+
+<!-- 🎁 GIFTS -->
+<div class="gift-section">
+
+    <div class="gift-card">
+        <h3>How happy I am 🎂</h3>
+        <div class="gift" id="g1"></div>
+    </div>
+
+    <div class="gift-card">
+        <h3>My heart When I See u 🥰</h3>
+        <div class="gift" id="g2"></div>
+    </div>
+
+    <div class="gift-card">
+        <h3>With you 💕</h3>
+        <div class="gift" id="g3"></div>
+    </div>
+
+    <div class="gift-card">
+        <h3>Gift for you 🎁</h3>
+        <div class="gift" id="g4"></div>
+    </div>
+
+    <div class="gift-card">
+        <h3>Wish ✨</h3>
+        <div class="gift" id="g5"></div>
+    </div>
+
+</div>
+
+<!-- 💌 FOOTER -->
+<div class="footer">
+    <h2>💖 To my lovely sister</h2>
+
+    <p>
+        Today is your special day 🎂✨ and I just want to remind you how much you mean to me.
+        You are not only my sister, but also my best friend, my comfort, and my biggest blessing in life.
+    </p>
+
+    <p>
+        I’m really grateful for every memory we’ve shared — the laughter, the small fights, and even the silent moments.
+        No matter where life takes us, you will always have a special place in my heart 💕
+    </p>
+
+    <p>
+        I hope this year brings you endless happiness, success(ራይድ ምትጀምሪበት ይሁንልሽ።😂), and love.
+        May all your dreams come true, one by one 🌸✨
+    </p>
+
+    <p>
+        Always remember: I’m proud of you, I believe in you, and I will always be here for you 💖
+    </p>
+
+    <h3>Happy Birthday once again 🎉🎂💞</h3>
+</div>
+
+<!-- 🎵 SCRIPT -->
+<script>
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+</script>
+
+</body>
+</html>
