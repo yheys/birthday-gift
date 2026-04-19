@@ -3,7 +3,7 @@ body {
     font-family: "Tenor Sans", sans-serif;
     text-align: center;
     background-image: url("image/240A1548.JPG");
-    background-size: cover;
+    background-size: 1000px;
     /* background: linear-gradient(135deg, #ffafbd, #c9a0ff); */
     color: white;
 }
