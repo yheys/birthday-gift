@@ -7,16 +7,24 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+
+    <!-- 🎆 NEW ADDITION: Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
+
+<!-- ⏳ COUNTDOWN SCREEN -->
+<div id="countdown-screen">
+    <h1 id="countdown-number">5</h1>
+</div>
 
 <!-- 🎵 MUSIC -->
 <audio id="bgMusic" loop>
     <source src="mezmur/🔴_አዲስ_ዝማሬ_ይችን_እድሜ_ዘማሪት_ሲስተር_ሕይወት_ተፈሪ_yichin_Idme256k.mp3" type="audio/mp3">
 </audio>
 
-<button class="music-btn" onclick="toggleMusic()">🎵 Play / Pause Music</button>
+<button class="music-btn" onclick="toggleMusic()">ተመስገን</button>
 
 <!-- 🎈 HEADER -->
 <h1 class="title">🎉 Happy Birthday 🎂</h1>
@@ -84,21 +92,9 @@
         Always remember: I’m proud of you, I believe in you, and I will always be here for you 💖
     </p>
 
-    <h3>Happy Birthday once again 🎉🎂💞   እወድሻለውውውውውው።</h3>
+    <h3>Happy Birthday once again 🎉🎂💞</h3>
 </div>
 
-<!-- 🎵 SCRIPT -->
-<script>
-function toggleMusic() {
-    const music = document.getElementById("bgMusic");
-
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-}
-</script>
-
+<script src="index.js"></script>
 </body>
 </html>

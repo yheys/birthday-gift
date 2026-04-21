@@ -2,18 +2,69 @@ body {
     margin: 0;
     font-family: "Tenor Sans", sans-serif;
     text-align: center;
-    
     background: linear-gradient(135deg, #ffafbd, #c9a0ff);
     color: white;
+    overflow-x: hidden;
 }
 
-/* title */
-.title {
-    font-size: 40px;
-    margin-top: 20px;
+/* COUNTDOWN OVERLAY */
+#countdown-screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #c9a0ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
-/* profile image */
+#countdown-number {
+    font-size: 120px;
+    font-weight: bold;
+    animation: zoom 1s ease-in-out infinite;
+}
+
+@keyframes zoom {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    100% { transform: scale(1.2); opacity: 1; }
+}
+
+/* FLOATING HEARTS */
+body::before {
+    content: "💖 💕 💗 💞 💘 💓 💝 💟";
+    position: fixed;
+    width: 100%;
+    font-size: 30px;
+    animation: floatHearts 25s linear infinite;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+@keyframes floatHearts {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-100vh); }
+}
+
+/* SMOOTH REVEAL */
+.title,
+.profile,
+.glass,
+.gift-card,
+.footer {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ORIGINAL STYLES (UNCHANGED) */
+.title { font-size: 40px; margin-top: 20px; }
+
 .profile img {
     width: 180px;
     height: 180px;
@@ -22,7 +73,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* glass text */
 .glass {
     display: inline-block;
     margin-top: 20px;
@@ -32,42 +82,29 @@ body {
     backdrop-filter: blur(8px);
 }
 
-/* music button */
 .music-btn {
     position: fixed;
     top: 15px;
     right: 15px;
-
     padding: 10px 15px;
     border: none;
     border-radius: 10px;
-
     background: white;
     cursor: pointer;
 }
 
-/* gift layout */
-.gift-section {
-    margin-top: 40px;
-}
+.gift-section { margin-top: 40px; }
+.gift-card { margin: 40px auto; }
 
-.gift-card {
-    margin: 40px auto;
-}
-
-/* gift box */
 .gift {
     width: 320px;
     height: 320px;
     margin: 10px auto;
-
     border-radius: 15px;
     border: 5px solid white;
-
     background-image: url("https://media.tenor.com/xAntboaLkW4AAAAM/happybirthday-happy-birthday.gif");
     background-size: cover;
     background-position: center;
-
     transition: 0.4s ease-in-out;
 }
 
@@ -76,25 +113,55 @@ body {
     box-shadow: 0 0 25px rgba(255,255,255,0.5);
 }
 
-/* hover gifs */
 #g1:hover { background-image: url("https://media.tenor.com/hRgp9Dh1ppQAAAAM/happy-birthday.gif"); }
 #g2:hover { background-image: url("https://media1.tenor.com/m/8nIuTXbuK7YAAAAC/friends-friends-tv-gif.gif"); }
 #g3:hover { background-image: url("https://media1.tenor.com/m/6ELmZImpfuwAAAAd/siblings-cuddle.gif"); }
 #g4:hover { background-image: url("https://media3.giphy.com/media/wvYNSqBAMDVx8CEYkt/giphy.gif"); }
 #g5:hover { background-image: url("https://media1.tenor.com/m/Vc3qxt2JrOYAAAAd/toy-car-little-girl.gif"); }
 
-/* footer */
 .footer {
     margin-top: 60px;
     padding: 25px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-
     border-radius: 15px;
-    color: white;
     line-height: 1.6;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+    .title { font-size: 28px; }
+    .profile img { width: 140px; height: 140px; }
+    .gift { width: 90%; height: 220px; }
+    .footer { width: 90%; padding: 20px; }
+}
+
+/* 🌟 NEW ADDITIONS */
+
+/* Background animation */
+body {
+    background-size: 400% 400%;
+    animation: bgMove 15s ease infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* sparkle cursor */
+body {
+    cursor: url("https://cur.cursors-4u.net/cursors/cur-9/cur817.cur"), auto;
+}
+
+/* falling text animation */
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
 }
